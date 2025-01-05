@@ -23,3 +23,7 @@ else
     echo "The element with atomic number $ATOMIC_NUMBER is $NAME ($SYMBOL). It's a $TYPE, with a mass of $MASS amu. $NAME has a melting point of $MELTING celsius and a boiling point of $BOILING celsius."
   done
 fi
+if [[ ! $1 =~ ^[0-9]+$ ]] && [[ ! $1 =~ ^[A-Za-z]+$ ]]; then
+  echo "Please provide a valid atomic number, symbol, or element name."
+  exit 0
+f
